@@ -1,5 +1,5 @@
 {
-  "name": "@pathlyhq/sdk",
+  "name": "@pathly/sdk",
   "version": "0.1.0",
   "description": "Official TypeScript SDK for the Pathly public /v1 API",
   "license": "Apache-2.0",
@@ -61,5 +61,8 @@
     "tsup": "^8.4.0",
     "typescript": "^5.8.2",
     "vitest": "^3.0.9"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

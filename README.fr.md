@@ -1,4 +1,4 @@
-# @pathlyhq/sdk
+# @pathly/sdk
 
 [English](README.md) · **Français** · [Español](README.es.md)
 
@@ -15,7 +15,7 @@ SDK TypeScript / JavaScript officiel pour l’API publique Pathly `/v1`.
 ## Installation
 
 ```bash
-npm install @pathlyhq/sdk
+npm install @pathly/sdk
 ```
 
 Node.js 18+ requis (`fetch` natif).
@@ -25,7 +25,7 @@ Node.js 18+ requis (`fetch` natif).
 Exporter `PATHLY_API_TOKEN`, ou passer `token` au constructeur. Le jeton n’est jamais journalisé.
 
 ```ts
-import { Client } from "@pathlyhq/sdk";
+import { Client } from "@pathly/sdk";
 
 const client = new Client(); // lit PATHLY_API_TOKEN
 await client.ping();
@@ -36,7 +36,7 @@ Optionnel : `PATHLY_API_URL` (défaut `https://api.pathlyhq.com`).
 ## Démarrage rapide
 
 ```ts
-import { Client } from "@pathlyhq/sdk";
+import { Client } from "@pathly/sdk";
 
 const client = new Client({ token: process.env.PATHLY_API_TOKEN! });
 
@@ -78,7 +78,7 @@ Les créations envoient une `Idempotency-Key` (UUID auto sauf si vous en fournis
 ## Erreurs
 
 ```ts
-import { APIError, isNotFound } from "@pathlyhq/sdk";
+import { APIError, isNotFound } from "@pathly/sdk";
 
 try {
   await client.getScenario("absent");

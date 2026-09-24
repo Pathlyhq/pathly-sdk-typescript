@@ -1,4 +1,4 @@
-# @pathlyhq/sdk
+# @pathly/sdk
 
 Official TypeScript / JavaScript SDK for the [Pathly](https://pathlyhq.com) public `/v1` API.
 
@@ -15,7 +15,7 @@ Official TypeScript / JavaScript SDK for the [Pathly](https://pathlyhq.com) publ
 ## Install
 
 ```bash
-npm install @pathlyhq/sdk
+npm install @pathly/sdk
 ```
 
 Requires Node.js 18+ (built-in `fetch`).
@@ -25,7 +25,7 @@ Requires Node.js 18+ (built-in `fetch`).
 Set `PATHLY_API_TOKEN`, or pass `token` to the constructor. The token is never logged.
 
 ```ts
-import { Client } from "@pathlyhq/sdk";
+import { Client } from "@pathly/sdk";
 
 const client = new Client(); // uses PATHLY_API_TOKEN
 // or: new Client({ token: process.env.PATHLY_API_TOKEN })
@@ -37,7 +37,7 @@ Optional: `PATHLY_API_URL` (default `https://api.pathlyhq.com`).
 ## Quick start
 
 ```ts
-import { Client } from "@pathlyhq/sdk";
+import { Client } from "@pathly/sdk";
 
 const client = new Client({ token: process.env.PATHLY_API_TOKEN! });
 
@@ -79,7 +79,7 @@ Creates send an `Idempotency-Key` (auto-generated UUID unless you pass one). Tra
 ## Errors
 
 ```ts
-import { APIError, isNotFound } from "@pathlyhq/sdk";
+import { APIError, isNotFound } from "@pathly/sdk";
 
 try {
   await client.getScenario("missing");
