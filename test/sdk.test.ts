@@ -163,7 +163,7 @@ describe("Client construction", () => {
     delete process.env.PATHLY_API_URL;
     const c = new Client({ token: "t" });
     expect(c.baseUrl).toBe(DEFAULT_BASE_URL);
-    expect(VERSION).toBe("0.1.0");
+    expect(VERSION).toBe("0.1.1");
     expect(c.userAgent).toBe(`pathly-sdk-typescript/${VERSION}`);
     expect(MAX_ATTEMPTS).toBe(4);
     expect(PAGE_SIZE).toBe(200);

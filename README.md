@@ -1,6 +1,12 @@
 # @pathly/sdk
 
-Official TypeScript / JavaScript SDK for the [Pathly](https://pathlyhq.com) public `/v1` API.
+**This published package is provision-only 0.1.** It creates and updates
+scenarios, webhooks and SLA targets. It does not trigger runs or read results.
+Developers who need `runScenario` / `getRun` / `listRuns` must use the official
+monorepo package `@pathly/sdk` (`pathly/packages/sdk-ts`). Do not expect this
+0.1 API to grow.
+
+Official TypeScript / JavaScript SDK for the [Pathly](https://pathlyhq.com) public `/v1` API (provisioning surface).
 
 **English** · [Français](README.fr.md) · [Español](README.es.md)
 
@@ -48,6 +54,15 @@ const scenario = await client.createScenario({
   url: "https://shop.example.com/",
   intervalSec: 300,
   expectText: "Our products",
+});
+
+const chain = await client.createScenario({
+  name: "Login then /me",
+  intervalSec: 300,
+  httpChain: [
+    { method: "POST", url: "https://api.example.com/login", assertStatus: 200 },
+    { method: "GET", url: "https://api.example.com/me", assertStatus: 200 },
+  ],
 });
 
 await client.muteScenario(scenario.id, "2026-10-01T00:00:00Z");

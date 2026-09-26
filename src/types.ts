@@ -87,6 +87,7 @@ export interface ScenarioInput {
   cron?: string;
   enabled?: boolean;
   scenario?: ScenarioAst;
+  httpChain?: Array<Record<string, unknown>>;
 }
 
 export interface MaintenanceWindow {
