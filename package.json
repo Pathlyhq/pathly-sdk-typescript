@@ -12,7 +12,7 @@
   "homepage": "https://pathlyhq.com",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pathlyhq/pathly-sdk-typescript.git"
+    "url": "git+https://github.com/Pathly-Monitoring/pathly-sdk-typescript.git"
   },
   "bugs": {
     "url": "https://github.com/pathlyhq/pathly-sdk-typescript/issues"
