@@ -27,7 +27,7 @@ jobs:
           manifest-file: .release-please-manifest.json
 
   # npm Trusted Publishing (OIDC): no NPM_TOKEN secret. On npmjs.com, add
-  # Pathly-Monitoring/pathly-sdk-typescript, workflow release-please.yml,
+  # Pathlyhq/pathly-sdk-typescript, workflow release-please.yml,
   # environment npm as trusted publisher of @pathly/sdk.
   publish-npm:
     needs: release-please
